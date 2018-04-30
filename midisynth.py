@@ -12,5 +12,3 @@ def test():
     audio_data = midi_data.fluidsynth(fs=22050)
     for x in audio_data:
         print(x)
-    # print(audio_data)
-
