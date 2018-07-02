@@ -3,9 +3,6 @@
 #   File that is able to compare MIDI files to audio files using the
 #   Hidden Markov Model method
 #
-#   Like all implemented comparators, this class only requires one method to
-#   be implemented: the compare() one.
-#
 #   Author: David van Erkelens <david.vanerkelens@student.uva.nl>
 
 
@@ -30,6 +27,17 @@ class MarkovComparator:
             print('     Initializing MarkovComparator      ')
             print('======================================= ')
 
+    def compareToAll(self, midi):
+
+        # Path to the models
+        path = self.storage_path + '/models'
+
+        # Make a list of all models
+        audios = [x for x in os.listdir(path) if x.rsplit('.', 1)[1] == 'model']
+
+        # Pass on to other function
+        return self.compare(midi, audios)
+
 
     def compare(self, midi, audios):
 
@@ -49,7 +57,7 @@ class MarkovComparator:
 
         # Get midi and audio file names
         midiName, _ = midi.rsplit('.', 1)
-        audioName, _ = audio.split('.', 1)
+        audioName, _ = audio.rsplit('.', 1)
 
         # Format paths
         midiPath = self.storage_path + '/midichroma/' + midiName + '.vector'
