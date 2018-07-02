@@ -13,24 +13,31 @@ def main():
     debug = True
     storage = 'storage'
 
+    synth = MidiSynthesizer(storage, debug)
+    synth.synthEverything()
 
-    # synth = MidiSynthesizer(storage, debug)
-    # synth.synthEverything()
+    vec = VectorGenerator(storage, debug)
+    vec.generateEverything()
 
-    # vec = VectorGenerator(storage, debug)
-    # vec.generateEverything()
+    model = ModelGenerator(storage, debug)
+    model.generateEverything()
 
-    # model = ModelGenerator(storage, debug)
-    # model.generateEverything()
+    compare = 'BohemianRhapsody.mid'
 
+    markov = MarkovComparator(storage, debug)
     start_time = time.time()
+    print(markov.compareToAll(compare))
+    end_time = time.time()
+    total_time = end_time - start_time
+    print("Running time for HMM: " + str(total_time))
+
 
     timewarp = TimeWarpComparator(storage, debug)
-    # comparator = Comparator(markov)
-    # markov.compare('BohemianRhapsody.mid', ['07 - Rock Me.mp3','bohemian-rhapsody.mp3'])
-    print(timewarp.compareToAll('BohemianRhapsody.mid'))
-
+    start_time = time.time()
+    print(timewarp.compareToAll(compare))
     end_time = time.time()
+    total_time = end_time - start_time
+    print("Running time for DTW: " + str(total_time))
 
 
 if __name__ == '__main__':

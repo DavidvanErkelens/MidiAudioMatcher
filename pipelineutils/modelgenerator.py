@@ -9,6 +9,8 @@
 import os
 from hmmlearn import hmm
 from sklearn.externals import joblib
+import numpy as np
+import pickle
 
 # Class definition
 class ModelGenerator:
@@ -84,7 +86,7 @@ class ModelGenerator:
 
         # Train model to fit the data and store the model
         model.fit(data)
-        joblib.dump(target)
+        joblib.dump(model, target)
 
 
     # Function to check if a certain model has already been generated

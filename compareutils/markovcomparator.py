@@ -11,6 +11,7 @@ import os
 import pickle
 import hmmlearn
 import operator
+import time
 from sklearn.externals import joblib
 
 # Class definition
@@ -44,7 +45,12 @@ class MarkovComparator:
         results = {}
 
         for audio in audios:
+            start_time = time.time()
             results[audio] = self.compareOneAudio(midi, audio)
+            end_time = time.time()
+            total_time = end_time - start_time
+            print("Time for one comparison: " + str(total_time))
+
 
         # Sort the scores so the best result is on top
         res_sorted = sorted(results.items(), key=operator.itemgetter(1), reverse=True)

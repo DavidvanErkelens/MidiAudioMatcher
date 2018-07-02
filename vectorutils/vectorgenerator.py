@@ -8,6 +8,7 @@
 # Includes
 import os
 import librosa, librosa.display
+import pickle
 
 # Class definition
 class VectorGenerator:
@@ -83,7 +84,7 @@ class VectorGenerator:
 
         # Print debug statement if necessary
         if self.debug:
-            print("Generating chroma vectors for " + file + "(" + version + ")...")
+            print("Generating chroma vectors for " + file + " (" + version + ")...")
 
         # Format the target path
         target = self.storage_path + '/' + version + 'chroma/' + name + '.vector'

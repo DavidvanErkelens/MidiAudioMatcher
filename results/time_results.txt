@@ -1,0 +1,79 @@
+I Feel Love:
+======================================= 
+     Initializing MarkovComparator      
+======================================= 
+Time for one comparison: 0.0215303897857666
+Time for one comparison: 0.022066116333007812
+Time for one comparison: 0.019478559494018555
+Time for one comparison: 0.02875685691833496
+Time for one comparison: 0.018010377883911133
+Time for one comparison: 0.013084173202514648
+('09 We Will Rock You.model', 15671.149242474776)
+Running time for HMM: 0.12326908111572266
+
+======================================= 
+    Initializing TimeWarpComparator      
+======================================= 
+Time for one comparison: 38.72231149673462
+Time for one comparison: 147.21301293373108
+Time for one comparison: 109.20239233970642
+Time for one comparison: 62.19952392578125
+Time for one comparison: 50.95746207237244
+Time for one comparison: 111.02492785453796
+('Donna Summer - I Feel Love Studio Version.vector', 1.6794734757128678)
+Running time for DTW: 519.3199498653412
+
+-------------------------------------------------------------------------------
+
+Slowed down version of We Will Rock You:
+======================================= 
+     Initializing MarkovComparator      
+======================================= 
+Time for one comparison: 0.00918126106262207
+Time for one comparison: 0.015435218811035156
+Time for one comparison: 0.017155170440673828
+Time for one comparison: 0.01143956184387207
+Time for one comparison: 0.027686357498168945
+Time for one comparison: 0.010678529739379883
+Time for one comparison: 0.009511947631835938
+('09 We Will Rock You.model', 10366.193507588714)
+Running time for HMM: 0.10200810432434082
+
+======================================= 
+    Initializing TimeWarpComparator      
+======================================= 
+Time for one comparison: 15.847756147384644
+Time for one comparison: 59.562358140945435
+Time for one comparison: 45.52791452407837
+Time for one comparison: 27.7347993850708
+Time for one comparison: 20.979232788085938
+Time for one comparison: 13.512813091278076
+Time for one comparison: 44.69868731498718
+('09 We Will Rock You.vector', 1.602960819598982)
+Running time for DTW: 227.86387372016907
+
+-------------------------------------------------------------------------------
+
+Working with a cut version of Bohemian Rhapsody audio:
+======================================= 
+     Initializing MarkovComparator      
+======================================= 
+Time for one comparison: 0.01781630516052246
+Time for one comparison: 0.026169538497924805
+Time for one comparison: 0.02406144142150879
+Time for one comparison: 0.031967878341674805
+Time for one comparison: 0.01793646812438965
+Time for one comparison: 0.014656782150268555
+('bohemian-rhapsody-cut.model', 21391.304046246278)
+Running time for HMM: 0.1329641342163086
+
+======================================= 
+    Initializing TimeWarpComparator      
+======================================= 
+Time for one comparison: 43.91195225715637
+Time for one comparison: 152.8068332672119
+Time for one comparison: 59.74722671508789
+Time for one comparison: 48.544564962387085
+Time for one comparison: 31.15889835357666
+Time for one comparison: 105.36971807479858
+('Donna Summer - I Feel Love Studio Version.vector', 1.7631297766241292)            << DTW DOES NOT FIND THE CORRECT ONE, WHILE HMM DOES!!!!!!
