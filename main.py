@@ -22,7 +22,7 @@ def main():
     model = ModelGenerator(storage, debug)
     model.generateEverything()
 
-    compare = 'BohemianRhapsody.mid'
+    compare = 'RockYouSpeedUp.mid'
 
     markov = MarkovComparator(storage, debug)
     start_time = time.time()

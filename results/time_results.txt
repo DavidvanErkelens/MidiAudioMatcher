@@ -54,6 +54,35 @@ Running time for DTW: 227.86387372016907
 
 -------------------------------------------------------------------------------
 
+Speed up version of We Will Rock You:
+======================================= 
+     Initializing MarkovComparator      
+======================================= 
+Time for one comparison: 0.013465642929077148
+Time for one comparison: 0.010787487030029297
+Time for one comparison: 0.01035451889038086
+Time for one comparison: 0.01439666748046875
+Time for one comparison: 0.008986711502075195
+Time for one comparison: 0.005479335784912109
+('09 We Will Rock You.model', 9230.310855588656)
+Running time for HMM: 0.06614255905151367
+
+======================================= 
+    Initializing TimeWarpComparator      
+======================================= 
+Time for one comparison: 13.07550573348999
+Time for one comparison: 50.888657331466675
+Time for one comparison: 21.199568271636963
+Time for one comparison: 17.094221353530884
+Time for one comparison: 11.200355529785156
+Time for one comparison: 37.877928256988525
+('09 We Will Rock You.vector', 1.3598991505948048)
+Running time for DTW: 151.33653950691223
+
+
+
+-------------------------------------------------------------------------------
+
 Working with a cut version of Bohemian Rhapsody audio:
 ======================================= 
      Initializing MarkovComparator      
